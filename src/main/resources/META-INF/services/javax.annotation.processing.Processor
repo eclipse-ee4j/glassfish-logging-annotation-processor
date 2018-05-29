@@ -1,0 +1,2 @@
+org.glassfish.annotation.processing.logging.LogMessagesResourceBundleGenerator
+org.glassfish.annotation.processing.logging.LoggerInfoMetadataGenerator
