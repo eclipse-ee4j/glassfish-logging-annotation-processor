@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2012, 2018 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2022 Contributors to the Eclipse Foundation. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0, which is available at
@@ -29,7 +30,7 @@ public class GPLCopyright {
 
     private static final String GPLCOPYRIGHT_UNDATED =
  "#\n" +
- "# Copyright (c) XX_YEAR_XX Oracle and/or its affiliates. All rights reserved.\n" +
+ "# Copyright (c) XX_YEAR_XX Contributors to the Eclipse Foundation. All rights reserved.\n" +
  "#\n" +
  "# This program and the accompanying materials are made available under the\n" +
  "# terms of the Eclipse Public License v. 2.0, which is available at\n" +
