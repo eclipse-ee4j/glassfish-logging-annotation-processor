@@ -113,7 +113,9 @@
 		<artifactId>maven-javadoc-plugin</artifactId>
 		<version>3.4.1</version>
 		<configuration>
-		    <additionalparam>-Xdoclint:none</additionalparam>
+		    <additionalOptions>
+		        <option>-Xdoclint:none</option>
+		    </additionalOptions>
 		    <bottom>
 				<![CDATA[Copyright &#169; 1996-2018,
 				    <a href="http://www.oracle.com">Oracle</a>
