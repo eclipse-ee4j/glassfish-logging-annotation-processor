@@ -70,7 +70,6 @@ public abstract class BaseLoggingProcessor extends AbstractProcessor {
      * from the existing resource bundle file.
      * 
      * @param rbName the package the resource bundle is relative
-     * @return a LogResourceBundle
      */
     protected void loadLogMessages(LoggingMetadata lrb, String rbName) {
     
