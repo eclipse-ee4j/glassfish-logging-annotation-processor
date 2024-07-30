@@ -31,21 +31,25 @@ import javax.tools.StandardJavaFileManager;
 import javax.tools.ToolProvider;
 import javax.tools.JavaCompiler.CompilationTask;
 
-import junit.framework.TestCase;
-
 import org.glassfish.annotation.processing.logging.LogMessagesResourceBundleGenerator;
 import org.glassfish.annotation.processing.logging.LoggerInfoMetadataGenerator;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import com.foo.bar.Chocolate;
 import com.foo.bar.JavaBean;
+import org.junit.jupiter.api.TestInfo;
 
-public class LogMessagesResourceBundleGeneratorTest extends TestCase {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+public class LogMessagesResourceBundleGeneratorTest {
 
     private static final String  BASE_PATH = "./src/test/java/com/foo/bar";
-    
-    protected void setUp() {
-        System.out.println("Starting test " + this.getName());
+
+    @BeforeEach
+    protected void setUp(TestInfo testInfo) {
+        System.out.println("Starting test " + testInfo.getDisplayName());
         File[] resourceBundles = getResourceBundles();
         for (File f : resourceBundles) {
             System.out.println("Deleting " + f.getAbsolutePath());
