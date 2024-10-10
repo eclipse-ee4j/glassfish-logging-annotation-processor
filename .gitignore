@@ -1,0 +1,10 @@
+target/
+.idea
+*.ipr
+nbproject/
+nbactions.xml
+nb-configuration.xml
+.classpath
+.project
+.settings/
+
