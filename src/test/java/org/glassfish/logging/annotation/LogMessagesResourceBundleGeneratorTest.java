@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2012, 2018 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2025 Contributors to the Eclipse Foundation. All rights reserved.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0, which is available at
@@ -99,7 +100,7 @@ public class LogMessagesResourceBundleGeneratorTest {
         String output = executeCompiler(f1);
         assertTrue(output.contains("annotated by @LogMessagesResourceBundle does not end with 'LogMessages'"));
         File[] resourceBundles = getResourceBundles();
-        assertEquals(resourceBundles.length,0);        
+        assertEquals(0, resourceBundles.length);
     }
 
     @Test
@@ -109,7 +110,7 @@ public class LogMessagesResourceBundleGeneratorTest {
         String output = executeCompiler(f1, f2);
         assertTrue(output.contains("More than one resource bundle name specified."));
         File[] resourceBundles = getResourceBundles();
-        assertEquals(resourceBundles.length,0);
+        assertEquals(0, resourceBundles.length);
     }
     
     @Test
@@ -118,7 +119,7 @@ public class LogMessagesResourceBundleGeneratorTest {
         String output = executeCompiler(f1);
         assertTrue(output.contains("Annotation processing finished successfully."));
         File[] resourceBundles = getResourceBundles();
-        assertEquals(resourceBundles.length,2);        
+        assertEquals(2, resourceBundles.length);
     }
 
     @Test
