@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2012, 2018 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2025 Contributors to the Eclipse Foundation
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License v. 2.0, which is available at
@@ -16,8 +17,6 @@
 
 package org.glassfish.annotation.processing.logging;
 
-import java.io.BufferedWriter;
-import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.SortedMap;
@@ -136,7 +135,6 @@ public class LoggerInfoMetadataGenerator extends BaseLoggingProcessor {
             element = enclosing;
         } while(packageName == null);
         
-        BufferedWriter bufferedWriter = null;
         try {
             // Now persist the resource bundle
             // String resourceName = packageName + "." + RBNAME;
@@ -145,14 +143,6 @@ public class LoggerInfoMetadataGenerator extends BaseLoggingProcessor {
         } catch (Exception e) {
             error("Unable to generate LoggerMetadataInfoService class", e);
             return false;
-        }  finally {
-            if (bufferedWriter != null) {
-                try {
-                    bufferedWriter.close();
-                } catch (IOException e) {
-                    error("Unable to close LoggerMetadataInfoService writer", e);
-                }
-            }
         }
         return true;
     }
